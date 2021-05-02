@@ -1,0 +1,6 @@
+twd\entities\Book.class
+twd\sessionbean\AbstractFacade.class
+twd\entities\Book_.class
+twd\sessionbean\BookFacade.class
+twd\controller\bookController.class
+twd\sessionbean\BookFacadeLocal.class
