@@ -8,7 +8,7 @@
 5. [Artefatos](#artefatos)
 
 ## Desenvolvido por
-- Felipe Luis
+- Felipe Luis Soares Silva
 - Diego Cadena
 
 ## Curso
