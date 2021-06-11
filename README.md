@@ -9,7 +9,7 @@
 
 ## Desenvolvido por
 - Felipe Luis Soares Silva
-- Diego Cadena
+- Diego Cadena de Almeida
 
 ## Curso
 - Análise e desenvolvimento de sistemas
