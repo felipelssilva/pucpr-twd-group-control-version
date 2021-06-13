@@ -29,6 +29,12 @@
             </h:panelGrid>
 
         </h:form>
-
+        <h2><h:outputText id="outputName" value="#{helloBean.sayWelcome}"/></h2>
+        <h2><h:outputText id="outputProgram" value="#{helloBean.sayProgram}"/></h2>
+        <h2>
+            <h:outputText id="outputDate" value="#{helloBean.someDate}">
+                <f:convertDateTime pattern="dd-mm-yyyy"/>
+            </h:outputText>
+        </h2>
     </h:body>
 </html>
