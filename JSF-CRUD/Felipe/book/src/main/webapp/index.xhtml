@@ -8,11 +8,15 @@
     <h:body>
         <h1>CRUD</h1>
         <h:form>
-            <h:panelGrid columns="12" cellpadding="5">
+            <h:panelGrid columns="2" cellpadding="3">
                 <h:outputText value="Name " />
                 <p:inputText value="#{bookController.name}"/>
                 <h:outputText value="Author " />
                 <p:inputText value="#{bookController.author}" />
+                <h:outputText value="CoAuthor " />
+                <p:inputText value="#{bookController.coAuthor}" />
+                <h:outputText value="ISBN " />
+                <p:inputText value="#{bookController.isbn}" />
                 <h:outputText value="Category " />
                 <p:inputText value="#{bookController.category}"/>
                 <h:outputText value="Year " />
@@ -33,6 +37,12 @@
                 <p:column headerText="Author">
                     <h:outputText value="#{book.author}"/>
                 </p:column>
+                <p:column headerText="CoAuthor">
+                    <h:outputText value="#{book.coAuthor}"/>
+                </p:column>
+                <p:column headerText="ISBN">
+                    <h:outputText value="#{book.isbn}"/>
+                </p:column>
                 <p:column headerText="Category">
                     <h:outputText value="#{book.category}"/>
                 </p:column>
@@ -40,10 +50,10 @@
                     <h:outputText value="$#{book.price}"/>
                 </p:column>
                 <p:column style="width:100px;text-align: center">
-                    <p:commandButton icon="fa-pencil" update=":form:bookEdit" oncomplete="PF('editDialog').show()">
+                    <p:commandButton value="E" icon="fa-pencil" update=":form:bookEdit" oncomplete="PF('editDialog').show()">
                         <f:setPropertyActionListener value="#{book}" target="#{bookController.selectedBook}"/>
                     </p:commandButton>
-                    <p:commandButton action="#{bookController.deleteBook(book)}" icon="fa-trash"></p:commandButton>
+                    <p:commandButton value="D" action="#{bookController.deleteBook(book)}" icon="fa-trash"></p:commandButton>
                 </p:column>
             </p:dataTable>
             <p:dialog header="Edit Book" widgetVar="editDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
@@ -55,6 +65,10 @@
                         <p:inputText value="#{bookController.selectedBook.category}" />
                         <h:outputText value="Author: " />
                         <p:inputText value="#{bookController.selectedBook.author}"/>
+                        <h:outputText value="CoAuthor: " />
+                        <p:inputText value="#{bookController.selectedBook.coAuthor}"/>
+                        <h:outputText value="ISBN: " />
+                        <p:inputText value="#{bookController.selectedBook.isbn}"/>
                         <h:outputText value="Price: $" />
                         <p:inputText value="#{bookController.selectedBook.price}" />
                         <h:outputText value="Year: " />
@@ -64,6 +78,7 @@
                 </p:outputPanel>
             </p:dialog>
         </h:form>
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
     </h:body>
 </html>
-
