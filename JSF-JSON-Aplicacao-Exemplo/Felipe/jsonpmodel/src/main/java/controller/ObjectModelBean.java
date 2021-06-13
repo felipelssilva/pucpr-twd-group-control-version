@@ -14,7 +14,6 @@ import java.util.logging.*;
 import javax.json.*;
 import javax.json.stream.JsonGenerator;
 
-
 /**
  *
  * @author BSICoord
@@ -29,19 +28,13 @@ public class ObjectModelBean implements Serializable {
     List<DOMTreeRow> rowList;
     
     /* Form properties */
-    protected static final String PHONE_TYPE_HOME = "Home";
-    protected static final String PHONE_TYPE_MOBILE = "Mobile";
-    protected String firstName = "Duke";
-    protected String lastName = "Java";
-    protected int age = 18;
-    protected String streetAddress = "100 Internet Dr";
-    protected String city = "JavaTown";
-    protected String state = "JA";
-    protected String postalCode = "12345";
-    protected String phoneNumber1 = "111-111-1111";
-    protected String phoneType1 = PHONE_TYPE_MOBILE;
-    protected String phoneNumber2 = "222-222-2222";
-    protected String phoneType2 = PHONE_TYPE_HOME;
+    private String name = "Duke Book";
+    private String author = "Felipe L.";
+    private String coAuthor = "Duke Jr.";
+    private String isbn = "10-202-303-5";
+    private int year = 2014;
+    private String category = "Duku Duke Duku Duke";
+    private float price = (float) 20.5;
     protected String jsonTextArea = "";
     
     static final Logger log = Logger.getLogger("ObjectModelBean");
@@ -49,78 +42,28 @@ public class ObjectModelBean implements Serializable {
     public ObjectModelBean() {}
     
     /* Getters and setters */
-    public String getPhoneTypeHome() {
-        return PHONE_TYPE_HOME;
-    }
-    public String getPhoneTypeMobile() {
-        return PHONE_TYPE_MOBILE;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firtName) {
-        this.firstName = firtName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
-    }
-    public String getStreetAddress() {
-        return streetAddress;
-    }
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
-    }
-    public String getCity() {
-        return city;
-    }
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public String getState() {
-        return state;
-    }
-    public void setState(String state) {
-        this.state = state;
-    }
-    public String getPostalCode() {
-        return postalCode;
-    }
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-    public String getPhoneNumber1() {
-        return phoneNumber1;
-    }
-    public void setPhoneNumber1(String phoneNumber1) {
-        this.phoneNumber1 = phoneNumber1;
-    }
-    public String getPhoneType1() {
-        return phoneType1;
-    }
-    public void setPhoneType1(String phoneType1) {
-        this.phoneType1 = phoneType1;
-    }
-    public String getPhoneNumber2() {
-        return phoneNumber2;
-    }
-    public void setPhoneNumber2(String phoneNumber2) {
-        this.phoneNumber2 = phoneNumber2;
-    }
-    public String getPhoneType2() {
-        return phoneType2;
-    }
-    public void setPhoneType2(String phoneType2) {
-        this.phoneType2 = phoneType2;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getAuthor() { return author; }
+    public void setAuthor(String author) { this.author = author; }
+
+    public String getCoAuthor() { return coAuthor; }
+    public void setCoAuthor(String coAuthor) { this.coAuthor = coAuthor; }
+
+    public String getIsbn() { return isbn; }
+    public void setIsbn(String isbn) { this.isbn = isbn; }
+
+    public int getYear() { return year; }
+    public void setYear(int year) { this.year = year; }
+
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+
+    public float getPrice() { return price; }
+    public void setPrice(float price) { this.price = price; }
+
+
     public String getJsonTextArea() {
         return jsonTextArea;
     }
@@ -142,20 +85,13 @@ public class ObjectModelBean implements Serializable {
     public String buildJson() {        
         /* Build JSON Object Model */
         JsonObject model = Json.createObjectBuilder()
-            .add("firstName", firstName)
-            .add("lastName", lastName)
-            .add("age", age)
-            .add("streetAddress", streetAddress)
-            .add("city", city)
-            .add("state", state)
-            .add("postalCode", postalCode)
-            .add("phoneNumbers", Json.createArrayBuilder()
-                .add(Json.createObjectBuilder()
-                    .add("number", phoneNumber1)
-                    .add("type", phoneType1))
-                .add(Json.createObjectBuilder()
-                    .add("number", phoneNumber2)
-                    .add("type", phoneType2)))
+            .add("name", name)
+            .add("author", author)
+            .add("coAuthor", coAuthor)
+            .add("isbn", isbn)
+            .add("year", year)
+            .add("category", category)
+            .add("price", price)
         .build();
         
         /* Write JSON Output */
