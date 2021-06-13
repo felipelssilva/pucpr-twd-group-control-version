@@ -1,5 +1,7 @@
-D:\projects\pucpr-twd-group-control-version\JSF+CRUD\Felipe\book\src\main\java\twd\sessionbean\BookFacadeLocal.java
-D:\projects\pucpr-twd-group-control-version\JSF+CRUD\Felipe\book\src\main\java\twd\sessionbean\AbstractFacade.java
-D:\projects\pucpr-twd-group-control-version\JSF+CRUD\Felipe\book\src\main\java\twd\sessionbean\BookFacade.java
-D:\projects\pucpr-twd-group-control-version\JSF+CRUD\Felipe\book\src\main\java\twd\controller\bookController.java
-D:\projects\pucpr-twd-group-control-version\JSF+CRUD\Felipe\book\src\main\java\twd\entities\Book.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\tdw\entities\Book.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\controller\bookController.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\sessionbean\BookFacadeLocal.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\sessionbean\BookFacade.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\sessionbean\AbstractFacade.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\tdw\book\resources\JavaEE8Resource.java
+C:\Users\Fikipi\Documents\NetBeansProjects\Book\src\main\java\tdw\book\JAXRSConfiguration.java
