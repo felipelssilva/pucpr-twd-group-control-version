@@ -50,4 +50,27 @@ public class helloBean implements Serializable {
             return "Ajax message : Welcome " + name;
         }
     }
+    
+    public String getSayProgram(){
+        String outStr = "";
+        
+        if ("".equals(program) || program == null){
+            return "";
+        }else{
+            int num = Integer.parseInt(program);
+            switch (num){
+                case 1:
+                    outStr = "Programa: Tecnologias para Desenvolvimento Web";
+                    break;
+                case 2:
+                    outStr = "Programa: Oficina Certificadora";
+                    break;
+                case 3:
+                    outStr = "Programa: Outra Disciplina";
+                    break;
+            }
+        }
+        return outStr;
+    }
+    
 }
