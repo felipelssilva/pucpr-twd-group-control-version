@@ -12,10 +12,9 @@ import java.util.List;
 import javax.ejb.EJB;
 import tdw.entities.Book;
 import tdw.sessionbean.BookFacadeLocal;
-
 /**
  *
- * @author Cristina
+ * @author diego
  */
 @Named(value = "bookController")
 @SessionScoped
@@ -119,5 +118,5 @@ public class bookController implements Serializable {
         this.booksFacade.remove(book);
         return "index.xhtml?faces-redirect=true";
     }
-
+    
 }

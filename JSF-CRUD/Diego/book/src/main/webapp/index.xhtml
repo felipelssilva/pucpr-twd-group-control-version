@@ -22,7 +22,7 @@
                 <p:commandButton value="Add" icon="fa fa-fw fa-plus" action="#{bookController.createBook()}"/>
             </h:panelGrid>
         </h:form>
-                <h:form  id="form">
+        <h:form  id="form">
             <p:dataTable value="#{bookController.getAllBooks()}" var="book" style="margin: 2em;" rowKey="#{book.id}">
                 <p:column headerText="Name">
                     <h:outputText value="#{book.name}"/>
@@ -65,7 +65,7 @@
             </p:dialog>
         </h:form>
         <br />
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />        
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
     </h:body>
 </html>
 

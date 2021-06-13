@@ -8,8 +8,8 @@
 5. [Artefatos](#artefatos)
 
 ## Desenvolvido por
-- Felipe Luis
-- Diego Cadena
+- Felipe Luis Soares Silva
+- Diego Cadena de Almeida
 
 ## Curso
 - Análise e desenvolvimento de sistemas

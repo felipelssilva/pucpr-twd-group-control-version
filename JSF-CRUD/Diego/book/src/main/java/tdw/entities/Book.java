@@ -149,7 +149,7 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return "tdw.entities.Book[ id=" + id + " ]";
+        return "twd.entities.Book[ id=" + id + " ]";
     }
     
 }
