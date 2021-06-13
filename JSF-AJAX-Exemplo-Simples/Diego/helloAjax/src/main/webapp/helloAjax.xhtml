@@ -12,14 +12,14 @@
                 <h:inputText id="name" value="#{helloBean.name}"></h:inputText>
                 <h:outputText value="Program: "/>
                 <h:selectOneMenu id="program" value="#{helloBean.program}">
-                    <f:selectItem itemValue="0" itemLabel="-">
-                    <f:selectItem itemValue="1" itemLabel="Tecnologias para Desenvolvimento Web">
-                    <f:selectItem itemValue="2" itemLabel="Oficina Certificadora">
-                    <f:selectItem itemValue="3" itemLabel="Outra disciplina">
+                    <f:selectItem itemValue="0" itemLabel="-"/>
+                    <f:selectItem itemValue="1" itemLabel="Tecnologias para Desenvolvimento Web"/>
+                    <f:selectItem itemValue="2" itemLabel="Oficina Certificadora"/>
+                    <f:selectItem itemValue="3" itemLabel="Outra disciplina"/>
                 </h:selectOneMenu>
                 <h:outputText value="Date: "/>
                 <h:inputText value="#{helloBean.someDate}">
-                    <f:convertDateTime pattern="dd-mm-yyyy"/>
+                    <f:convertDateTime pattern="dd-MM-yyyy"/>
                 </h:inputText>            
                 <h:commandButton value="Welcome Me">
                     <f:ajax execute="name" render="outputName" />
@@ -33,7 +33,7 @@
         <h2><h:outputText id="outputProgram" value="#{helloBean.sayProgram}"/></h2>
         <h2>
             <h:outputText id="outputDate" value="#{helloBean.someDate}">
-                <f:convertDateTime pattern="dd-mm-yyyy"/>
+                <f:convertDateTime pattern="dd-MM-yyyy"/>
             </h:outputText>
         </h2>
     </h:body>

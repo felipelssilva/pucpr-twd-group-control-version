@@ -8,6 +8,7 @@ package controller;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.Date;
 
 @Named(value = "helloBean")
 @SessionScoped
@@ -15,7 +16,15 @@ public class helloBean implements Serializable {
 
     private String name;
     private String program;
-    private String someDate;
+    private Date someDate;
+
+    public Date getSomeDate() {
+        return someDate;
+    }
+
+    public void setSomeDate(Date someDate) {
+        this.someDate = someDate;
+    }
 
     public String getProgram() {
         return program;
@@ -23,14 +32,6 @@ public class helloBean implements Serializable {
 
     public void setProgram(String program) {
         this.program = program;
-    }
-
-    public String getSomeDate() {
-        return someDate;
-    }
-
-    public void setSomeDate(String someDate) {
-        this.someDate = someDate;
     }
 
     public helloBean() {
