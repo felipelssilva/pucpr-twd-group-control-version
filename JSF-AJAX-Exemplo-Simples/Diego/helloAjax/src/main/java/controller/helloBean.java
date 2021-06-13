@@ -14,6 +14,24 @@ import java.io.Serializable;
 public class helloBean implements Serializable {
 
     private String name;
+    private String program;
+    private String someDate;
+
+    public String getProgram() {
+        return program;
+    }
+
+    public void setProgram(String program) {
+        this.program = program;
+    }
+
+    public String getSomeDate() {
+        return someDate;
+    }
+
+    public void setSomeDate(String someDate) {
+        this.someDate = someDate;
+    }
 
     public helloBean() {
     }
